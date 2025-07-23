@@ -11,13 +11,13 @@
     /* Global Styles */
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; padding: 40px; }
-    a { color: #0066cc; }
+    a { color: #0066cc; text-decoration: none; }
 
     /* Header */
     .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 40px; }
     .header .name { font-size: 2.5rem; font-weight: 700; }
     .header .contact { text-align: right; font-size: 0.9rem; color: #555; }
-    .header .contact div { margin-bottom: 6px; }
+    .header .contact div, .header .contact a { margin-bottom: 6px; }
 
     /* Sections */
     section { margin-bottom: 30px; }
@@ -38,75 +38,82 @@
     .skills-list ul { flex: 1; min-width: 150px; padding: 0; list-style: disc inside; }
     .skills-list ul li { margin-bottom: 6px; }
 
-    /* Filler note style */
+    /* Note style */
     .note { font-style: italic; color: #999; margin-top: 6px; }
   </style>
 </head>
 <body>
-  <!-- Header: replace with your details -->
+  <!-- Header -->
   <header class="header">
     <div class="name">Demetrius Balleau</div>
     <div class="contact">
-      <div>Albany, California]</div>
+      <div>Albany, California</div>
       <div>510-708-7976</div>
       <div>de.balleau@gmail.com</div>
-      <a href="https://www.demetri.us" target = "_blank">Demetri.us</a>
+      <a href="https://www.demetri.us" target="_blank">demetri.us</a>
     </div>
   </header>
 
-  <!-- About Me: write 2-3 sentences about your goals and strengths -->
-  <section class="about">
-    <h2>About Me</h2>
-    <p> Motivated high school student who is passionate about coding, technological innovation and developing new critical thinking capabilities.</p>
-    <p class="note">I balance my analytical drive with outdoor pursuits which include Skiing, Snowboarding, Shotput, Discus, Ultimate Frisbee, and I maintain peak performance through dedicated fitness and reflective thinking.</p>
+  <!-- Objective -->
+  <section class="objective">
+    <h2>Objective</h2>
+    <p>Seeking a summer software-engineering internship to apply my AI/ML skills and hands-on programming experience.</p>
   </section>
 
-  <!-- Education: list your high school and relevant details -->
+  <!-- About Me -->
+  <section class="about">
+    <h2>About Me</h2>
+    <p>High-school sophomore with 4 years of Python experience, UC Berkeley AI/ML certificate, and Science Olympiad medalist.</p>
+  </section>
+
+  <!-- Education -->
   <section class="education">
     <h2>Education</h2>
     <div class="item">
-      <h3>Albany High School, Albany, California</h3>
+      <h3>Albany High School, Albany, CA</h3>
       <div class="meta">Expected Graduation: June 2027 | GPA: 3.58</div>
       <ul>
-        <li> Computer Science (9th grade) and AP Computer Science Principles.</li>
-        <li>UC Berkeley's ID Tech Camp Certificate — Artifical Inteligence and Machine Learning</li>
+        <li>Completed Computer Science (9th grade) and AP Computer Science Principles</li>
+        <li>Earned UC Berkeley ID Tech Camp Certificate in Artificial Intelligence & Machine Learning</li>
       </ul>
-      <p class="note">Award of Excellence - Science Olympiad 2020-2021</p>
+      <p class="note">Science Olympiad Award of Excellence (2020–21)</p>
     </div>
   </section>
 
-  <!-- Experience: include school projects in place of formal roles -->
-<section class="experience">
-  <h2>Experience</h2>
-  <!-- Example school project entry: replace with your own -->
-  <div class="item">
-    <h3> Line Dodger / School Project</h3>
-    <div class="meta">May 2023</div>
-    <p>A teammate and I used Snap by Berkeley to make a game where the player has to use their arrow keys to move the sprite in order to collect points and dodge a 3 lines, you need to hit a certain point milestone for each level. </p>
-  </div>
-</section>
+  <!-- Experience -->
+  <section class="experience">
+    <h2>Experience</h2>
+    <div class="item">
+      <h3>Line Dodger / School Project</h3>
+      <div class="meta">May 2023</div>
+      <p>Built a 3-level browser game using Snap!; implemented collision detection and level-progression logic; collaborated in a 2-person agile workflow.</p>
+    </div>
+  </section>
 
-
-  <!-- Skills: divide into technical and soft skills -->
+  <!-- Skills -->
   <section class="skills">
     <h2>Skills</h2>
     <div class="skills-list">
       <ul>
-        <li>Python (4 years)</li>
-        <li>Html (2 years)</li>
+        <li>Python (NumPy, Pandas)</li>
+        <li>HTML &amp; CSS</li>
+        <li>JavaScript (React)</li>
+        <li>Git &amp; GitHub</li>
       </ul>
       <ul>
         <li>Teamwork</li>
-        <li>Critial Thinking</li>
+        <li>Critical Thinking</li>
+        <li>Problem Solving</li>
+        <li>Agile Collaboration</li>
       </ul>
     </div>
   </section>
 
-  <!-- Activities: mention clubs, sports, or personal projects -->
+  <!-- Activities -->
   <section class="activities">
     <h2>Activities</h2>
-    <p>Tech camp, Science Olympiad, Skiing, Snowboarding, Weight Training </p>
-    <p class="note">Tech Club and UC Berkeley ID Tech Camp sharpened my coding and teamwork skills. Science Olympiad, skiing, snowboarding, and weight training strengthened my problem-solving and resilience.</p>
+    <p>Vice President, Tech Club | Member, Science Olympiad | Skiing | Snowboarding | Weight Training</p>
+    <p class="note">Tech Club and UC Berkeley ID Tech Camp sharpened my coding and teamwork skills; Science Olympiad and athletics strengthened my resilience.</p>
   </section>
 </body>
 </html>
