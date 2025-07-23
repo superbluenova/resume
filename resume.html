@@ -11,35 +11,40 @@
     /* Global Styles */
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; padding: 40px; }
-    a { color: #0066cc; text-decoration: none; }
+    a { color: #0066cc; text-decoration: none; transition: all 0.2s ease; }
+    a:hover { text-decoration: underline; }
 
     /* Header */
-    .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 40px; }
+    .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; }
     .header .name { font-size: 2.5rem; font-weight: 700; }
-    .header .contact { text-align: right; font-size: 0.9rem; color: #555; }
+    .header .contact { background: #f5f5f5; padding: 20px; border-radius: 8px; font-size: 0.9rem; color: #555; }
     .header .contact div, .header .contact a { margin-bottom: 6px; }
 
-    /* Sections */
-    section { margin-bottom: 30px; }
-    h2 { font-size: 1.2rem; font-weight: 700; border-left: 4px solid #b3e5fc; padding-left: 10px; margin-bottom: 10px; }
+    /* Section separators */
+    section + section { padding-top: 30px; border-top: 1px solid #e0e0e0; }
+
+    /* Section headers */
+    h2 { font-size: 1.2rem; font-weight: 700; border-left: 5px solid #90caf9; padding-left: 10px; margin-bottom: 10px; color: #222; }
     p, ul { font-size: 0.95rem; color: #555; }
     ul { list-style: disc; margin-left: 20px; }
+    ul li { margin-bottom: 6px; }
 
-    /* Two-column layout for Experience & Education */
-    .two-col { display: flex; gap: 40px; flex-wrap: wrap; }
-    .col { flex: 1; min-width: 250px; }
+    /* Items */
     .item { margin-bottom: 20px; }
     .item h3 { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
     .item .meta { font-size: 0.85rem; color: #777; margin-bottom: 6px; }
-    .item p { margin-bottom: 4px; }
+    .note { font-style: italic; color: #999; margin-top: 6px; }
 
     /* Skills grid */
     .skills-list { display: flex; gap: 40px; flex-wrap: wrap; }
     .skills-list ul { flex: 1; min-width: 150px; padding: 0; list-style: disc inside; }
-    .skills-list ul li { margin-bottom: 6px; }
 
-    /* Note style */
-    .note { font-style: italic; color: #999; margin-top: 6px; }
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      body { padding: 20px; }
+      .header { flex-direction: column; align-items: flex-start; }
+      .header .contact { margin-top: 10px; width: 100%; }
+    }
   </style>
 </head>
 <body>
@@ -71,12 +76,12 @@
     <h2>Education</h2>
     <div class="item">
       <h3>Albany High School, Albany, CA</h3>
-      <div class="meta">Expected Graduation: June 2027 | GPA: 3.58</div>
+      <div class="meta">Expected Graduation: June 2027 &middot; GPA: 3.58</div>
       <ul>
-        <li>Completed Computer Science (9th grade) and AP Computer Science Principles</li>
-        <li>Earned UC Berkeley ID Tech Camp Certificate in Artificial Intelligence & Machine Learning</li>
+        <li>Completed Computer Science (9th grade) and AP Computer Science Principles.</li>
+        <li>Earned UC Berkeley ID Tech Camp Certificate in Artificial Intelligence &amp; Machine Learning.</li>
       </ul>
-      <p class="note">Science Olympiad Award of Excellence (2020–21)</p>
+      <p class="note">Science Olympiad Award of Excellence &mdash; ranked top 10% statewide (2020&ndash;21).</p>
     </div>
   </section>
 
@@ -86,7 +91,7 @@
     <div class="item">
       <h3>Line Dodger / School Project</h3>
       <div class="meta">May 2023</div>
-      <p>Built a 3-level browser game using Snap!; implemented collision detection and level-progression logic; collaborated in a 2-person agile workflow.</p>
+      <p>Built a 4-level browser game using Snap!; implemented collision detection and level-progression logic; collaborated in a 2-person agile workflow.</p>
     </div>
   </section>
 
@@ -112,7 +117,7 @@
   <!-- Activities -->
   <section class="activities">
     <h2>Activities</h2>
-    <p>Vice President, Tech Club | Member, Science Olympiad | Skiing | Snowboarding | Weight Training</p>
+    <p>Vice President, Tech Club &middot; Member, Science Olympiad &middot; Skiing &middot; Snowboarding &middot; Weight Training</p>
     <p class="note">Tech Club and UC Berkeley ID Tech Camp sharpened my coding and teamwork skills; Science Olympiad and athletics strengthened my resilience.</p>
   </section>
 </body>
